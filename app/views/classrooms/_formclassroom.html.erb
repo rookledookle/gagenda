@@ -1,0 +1,17 @@
+<%= form_for(@classroom) do |f| %>
+  <p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  </p>
+  <p>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  </p>
+  <p>
+  <%= f.label :chair_rating %>
+  <%= f.text_area :chair_rating %>
+  </p>
+  <p>
+  <%= f.submit %>
+  </p>
+<% end %>
