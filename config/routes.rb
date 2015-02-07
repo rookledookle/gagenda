@@ -1,33 +1,13 @@
 Rails.application.routes.draw do
-  get 'categories/index'
-
-  get 'categories/new'
-
-  get 'categories/edit'
-
-  get 'categories/show'
-
-  get 'courses/index'
-
-  get 'courses/new'
-
-  get 'courses/edit'
-
-  get 'courses/show'
-
-  get 'classrooms/index'
-
-  get 'classrooms/new'
-
-  get 'classrooms/edit'
-
-  get 'classrooms/show'
+  resources :classrooms
+  resources :courses
+  resources :categories
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'courses#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
