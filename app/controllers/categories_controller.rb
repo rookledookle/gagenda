@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
     @category = Category.create(category_params)
     if @category.save
       redirect_to categories_path
+    end
   end
 
   def edit
@@ -21,6 +22,7 @@ class CategoriesController < ApplicationController
     @category = Category.update(category_params)
     if @category.save
       redirect_to category_path(@category)
+    end
   end
 
   def show
