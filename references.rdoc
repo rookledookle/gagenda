@@ -1,4 +1,3 @@
-<!-- 
 REFERENCES: 
 
 This app would not be possible without the following gems:
@@ -22,5 +21,3 @@ https://github.com/codegram/date_validator
 
 super optional:
 https://github.com/validates-email-format-of/validates_email_format_of
-
- -->
