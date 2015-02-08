@@ -45,13 +45,13 @@ cl4 = Classroom.create(name:"Celeste", description:"Modeled after a Netherlands-
 cl5 = Classroom.create(name:"Burgundy", description:"Screening room. Great for presentations and big conference calls!", chair_rating:"Best we have.")
 cl6 = Classroom.create(name:"Mint", description:"Bare-boned. State-of-the-art projector. Minimalistic.", chair_rating:"Only transparent plastic chairs with metal legs allowed.")
 
-# # COURSES & CLASSROOMS #
-# cl1.courses = [co1,co2,co12]
-# cl2.courses = [co9]
-# cl3.courses = [co1,co2,co12,co13]
-# cl4.courses = [co13,co5,co6]
-# cl5.courses = [c03,c04]
-# cl6.courses = [c07,c08,co10,co11]
+# COURSES & CLASSROOMS #
+cl1.courses = [co1,co2,co12]
+cl2.courses = [co9]
+cl3.courses = [co1,co2,co12,co13]
+cl4.courses = [co13,co5,co6]
+cl5.courses = [co3,co4]
+cl6.courses = [co7,co8,co10,co11]
 
 
 
