@@ -1,4 +1,9 @@
+require 'dynamic_form'
+
 <%= form_for(@course) do |f| %>
+  <p>
+    <%= f.error_messages error_message_on(@course) %>
+  </p>
   <p>
   <%= f.label :name %>
   <%= f.text_field :name %>
