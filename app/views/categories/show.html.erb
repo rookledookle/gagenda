@@ -1,3 +1,6 @@
 <h3>This is the category you selected</h3>
 
-<%= @category.name %>
+<p><%= @category.name %></p>
+<% @category.courses.each do |coursename| %>
+  <p><%= coursename.name %></p>
+<% end %>
