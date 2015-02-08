@@ -4,6 +4,6 @@
 <p><%= @course.duration %></p>
 <p><%= @course.start_date %></p>
 <p><%= @course.end_date %></p>
-<p><%= @course.price %></p>
+<p><%= number_to_currency(@course.price, :unit => "£", :delimiter => ",") %></p>
 
 <p><%= link_to "Edit", edit_course_path %></p>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150208193721) do
+ActiveRecord::Schema.define(version: 20150208203828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,10 +49,10 @@ ActiveRecord::Schema.define(version: 20150208193721) do
     t.string   "duration"
     t.date     "start_date"
     t.date     "end_date"
-    t.decimal  "price"
     t.integer  "slots_left"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.decimal  "price",      precision: 8, scale: 2
   end
 
 end

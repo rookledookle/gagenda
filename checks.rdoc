@@ -7,3 +7,7 @@
 
 8 Feb 8:20pm
 - now edit pages work too.
+- edit: they do not.
+
+8 Feb 8:25pm
+- now they do.
