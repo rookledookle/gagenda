@@ -19,9 +19,10 @@ class ClassroomsController < ApplicationController
   end
 
   def update
-    @classroom = Classroom.update(classroom_params)
+    @classroom = Classroom.find(params[:id])
+    @classroom.update(classroom_params)
     if @classroom.save
-      redirect_to classroom_path(@classroon)
+      redirect_to classroom_path(@classroom)
     end
   end
 

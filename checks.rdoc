@@ -5,3 +5,5 @@
 8 Feb 8:16pm
 - all basic rails pages work for all models (show, index, new)
 
+8 Feb 8:20pm
+- now edit pages work too.
