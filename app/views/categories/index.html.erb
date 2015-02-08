@@ -1,2 +1,8 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<h3>These are all the categories</h3>
+
+<% @categories.each do |cat| %>
+  <p><%= cat.name %></p>
+  <% cat.courses.each do |coursename| %>
+    <p><%= coursename.name %></p>
+  <% end %>
+<% end %>
