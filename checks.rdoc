@@ -1,3 +1,7 @@
 8 Feb 7:48pm
 - all seed data working in console 
 - set up a classrooms_courses table to allow a course to be assigned to more than one classroom
+
+8 Feb 8:16pm
+- all basic rails pages work for all models (show, index, new)
+

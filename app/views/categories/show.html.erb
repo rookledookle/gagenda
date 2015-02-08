@@ -4,3 +4,4 @@
 <% @category.courses.each do |coursename| %>
   <p><%= link_to coursename.name, course_path(coursename) %></p>
 <% end %>
+<p><%= link_to "Edit", edit_category_path %></p>
