@@ -1,2 +1,6 @@
-<h1>Classrooms#show</h1>
-<p>Find me in app/views/classrooms/show.html.erb</p>
+<h3>This is the classroom you selected</h3>
+
+<p><%= @classroom.name %></p>
+<% @classroom.courses.each do |coursename| %>
+  <p><%= link_to coursename.name, course_path(coursename) %></p>
+<% end %>

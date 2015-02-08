@@ -1,8 +1,8 @@
 <h3>These are all the classrooms</h3>
 
 <% @classrooms.each do |clsrm| %>
-  <p><%= clsrm.name %></p>
+  <p><%= link_to clsrm.name, classroom_path(clsrm) %></p>
   <% clsrm.courses.each do |coursename| %>
-    <p><%= coursename.name %></p>
+    <p><%= link_to coursename.name, course_path(coursename) %></p>
   <% end %>
 <% end %>

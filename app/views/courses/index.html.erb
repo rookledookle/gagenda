@@ -1,5 +1,5 @@
 <h3>These are all the courses</h3>
 
 <% @courses.each do |course| %>
-  <p><%= course.name %></p>
+  <p><%= link_to course.name, course_path(course) %></p>
 <% end %>

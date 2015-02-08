@@ -2,5 +2,5 @@
 
 <p><%= @category.name %></p>
 <% @category.courses.each do |coursename| %>
-  <p><%= coursename.name %></p>
+  <p><%= link_to coursename.name, course_path(coursename) %></p>
 <% end %>
