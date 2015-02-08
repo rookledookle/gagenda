@@ -40,7 +40,7 @@ ca7.courses = [co1,co2,co12,co13]
 # CLASSROOMS SEED DATA #
 cl1 = Classroom.create(name:"Burnt Cedar", description:"This classroom has the capacity of 23 adults or 20 adults and 4 very small adults. Heating in the winter and AC in the summer.", chair_rating:"As the name suggests, all chairs are wooden, pretentious and aesthetically pleasing. Only 11 out of 25 chairs are unbearable.")
 cl2 = Classroom.create(name:"Vanilla", description:"Exactly like your highschool classroom. Maximum capacity 18, accommodates 26.", chair_rating:"Nothing eventful.")
-cl3 = Classroom.create(name:"Thistle", description:"Perfect room for group chats, instructor one-on-ones and quick naps.", chair_rating:"Pros: soft beanbag chairs and sofas only. Cons: unconducive for productivity.")
+cl3 = Classroom.create(name:"Thistle", description:"Perfect room for group chats, instructor one-on-ones and quick naps.", chair_rating:"Pros: soft beanbag chairs and sofas only. Cons: bad for productivity.")
 cl4 = Classroom.create(name:"Cyan", description:"Modeled after a Netherlands-based experimental design studio space.", chair_rating:"NIL. There are no chairs. Only standing tables and treadmill work desks.")
 cl5 = Classroom.create(name:"", description:"", chair_rating:"")
 cl6 = Classroom.create(name:"", description:"", chair_rating:"")
