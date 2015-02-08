@@ -10,7 +10,11 @@ class CoursesController < ApplicationController
   def create
     @course = Course.create(course_params)
     if @course.save
-      redirect_to courses_path
+      redirect_to course_path(@course)
+    end
+    if @course.errors.any?
+      new_course_path
+      @course.errors.full_messages.each
     end
   end
 
