@@ -1,7 +1,7 @@
 <h3>These are all the categories</h3>
 
 <% @categories.each do |cat| %>
-  <p><%= cat.name %></p>
+  <p><%= link_to cat.name, category_path(cat) %></p>
   <% cat.courses.each do |coursename| %>
     <p><%= coursename.name %></p>
   <% end %>
