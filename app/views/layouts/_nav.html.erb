@@ -5,7 +5,16 @@
   <%= link_to "All Classrooms", classrooms_path %>
 </p>
 <p>
+<% if current_user.role == "admin" %>
   <%= link_to "New Course", new_course_path %>
   <%= link_to "New Category", new_category_path %>
   <%= link_to "New Classroom", new_classroom_path %>
+<% end %>
+</p>
+
+<p>
+<% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  <%= link_to('Edit registration', edit_user_registration_path) %>
+<% end %>
 </p>

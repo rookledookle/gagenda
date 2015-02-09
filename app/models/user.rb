@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   private
   def set_default_role
-    User.role ||= Role.find_by_name('registered')
+    self.role ||= Role.find_by_name('registered')
   end
 
   belongs_to :course
