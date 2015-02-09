@@ -10,6 +10,8 @@ cancancan
 rspec
 capybara https://github.com/jnicklas/capybara
 icalandar https://github.com/icalendar/icalendar
+https://github.com/plataformatec/simple_form
+*** add country select gem
 
 The following articles were also referenced: 
 http://guides.rubyonrails.org/association_basics.html

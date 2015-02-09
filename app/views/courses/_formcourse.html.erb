@@ -1,32 +1,23 @@
-<%= form_for(@course) do |f| %>
-  <% if @course.errors.any? %>
-  <div data-alert class="alert-box warning round">
-    <%= f.error_messages %>
-    <a href="#" class="close">&times;</a>
-  </div>
-  <% end %>
-
+<%= minimal_form_for(@course) do |f| %>
   <p>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.input :name %>
   </p>
   <p>
-  <%= f.label :duration %>
-  <%= f.text_field :duration %>
+  <%= f.input :duration %>
   </p>
   <p>
-  <%= f.label :start_date %>
-  <%= f.date_select :start_date %>
+  <%= f.input :start_date, as: :date %>
   </p>
   <p>
-  <%= f.label :end_date %>
-  <%= f.date_select :end_date %>
+  <%= f.input :end_date, as: :date %>
   </p>
   <p>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
+  <%= f.input :price %>
   </p>
   <p>
-  <%= f.submit %>
+  <%= f.association :categories, as: :check_boxes %>
+  </p>
+  <p>
+  <%= f.button :submit %>
   </p>
 <% end %>
