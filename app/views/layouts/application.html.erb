@@ -12,6 +12,19 @@
   </head>
 
   <body>
+  <% if flash[:error] %>
+    <div data-alert class="alert-box warning round">
+      <%= flash[:error] %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  <% end %>
+  <% if flash[:notice] %>
+    <div data-alert class="alert-box success radius">
+      <%= flash[:notice] %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  <% end %>
+
     <%= render 'layouts/nav' %>
     <%= yield %>
 

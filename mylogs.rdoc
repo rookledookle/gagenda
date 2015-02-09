@@ -11,3 +11,7 @@
 
 8 Feb 8:25pm
 - now they do.
+
+9 Feb 9:43pm
+- removed calendar-helper gem 
+- added foundation gem and installed it

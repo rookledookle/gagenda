@@ -9,11 +9,11 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.create(course_params)
-    if @course.errors.any?
-      new_course_path
-    end
     if @course.save
-      redirect_to course_path(@course)
+      redirect_to course_path(@course) 
+      flash[:notice] = "Course successfully created"
+    else
+      render 'new'
     end
   end
 
@@ -23,7 +23,7 @@ class CoursesController < ApplicationController
 
   def update
     @course = Course.find(params[:id])
-    @course.update(course_params)
+    @course.update!(course_params)
     if @course.save
       redirect_to course_path(@course)
     end

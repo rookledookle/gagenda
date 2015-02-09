@@ -1,9 +1,11 @@
-require 'dynamic_form'
-
 <%= form_for(@course) do |f| %>
-  <p>
-    <%= f.error_messages error_message_on(@course) %>
-  </p>
+  <% if @course.errors.any? %>
+  <div data-alert class="alert-box warning round">
+    <%= f.error_messages %>
+    <a href="#" class="close">&times;</a>
+  </div>
+  <% end %>
+
   <p>
   <%= f.label :name %>
   <%= f.text_field :name %>

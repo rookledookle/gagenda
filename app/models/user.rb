@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :course
-  validates :password, length: { in: 6..20, too_short: "password must be within 6 to 20 characters long!" }
+  validates :email, uniqueness: true
 end
