@@ -8,7 +8,7 @@ class ClassroomsController < ApplicationController
   end
 
   def create
-    @classoom = Classroom.create(classroom_params)
+    @classroom = Classroom.create(classroom_params)
     if @classroom.save
       redirect_to classrooms_path
       flash[:notice] = "Classroom successfully created"
