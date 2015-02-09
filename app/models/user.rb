@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :course
+  has_many :students, class_name:"User", foreign_key:"instructor_id"
+  has_many :instructors, class_name:"User", foreign_key:"student_id"
+
+  # validates :email, :presence => true, :email => true
   validates :email, uniqueness: true
-  validates :email, :presence => true, :email => true
+
 end
