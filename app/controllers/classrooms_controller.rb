@@ -12,7 +12,7 @@ class ClassroomsController < ApplicationController
     @classroom = Classroom.create(classroom_params)
     if @classroom.save
       redirect_to classrooms_path
-      flash[:notice] = "Classroom successfully created"
+      flash[:notice] = "You successfully created a classroom!"
     else
       render 'new'
     end
@@ -27,11 +27,18 @@ class ClassroomsController < ApplicationController
     @classroom.update(classroom_params)
     if @classroom.save
       redirect_to classroom_path(@classroom)
+      flash[:notice] = "You successfully updated a classroom!"
     end
   end
 
   def show
     @classroom = Classroom.find(params[:id])
+  end
+
+  def destroy
+    @classroom = Classroom.find(params[:id])
+    @classroom.destroy
+    redirect_to classrooms_path
   end
 
   private

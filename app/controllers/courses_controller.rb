@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
     @course = Course.create(course_params)
     if @course.save
       redirect_to course_path(@course) 
-      flash[:notice] = "Course successfully created"
+      flash[:notice] = "You successfully created a course!"
     else
       render 'new'
     end
@@ -26,6 +26,7 @@ class CoursesController < ApplicationController
     @course.update!(course_params)
     if @course.save
       redirect_to course_path(@course)
+      flash[:notice] = "You successfully updated a course!"
     end
   end
 
