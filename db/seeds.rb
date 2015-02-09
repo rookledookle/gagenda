@@ -54,11 +54,6 @@ cl5.courses = [co3,co4]
 cl6.courses = [co7,co8,co10,co11]
 
 
-
-
-
-
-
-
-
-
+['registered', 'banned', 'moderator', 'admin'].each do |role|
+  Role.find_or_create_by({name: role})
+end
