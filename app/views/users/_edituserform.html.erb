@@ -1,0 +1,14 @@
+<%= minimal_form_for(@user) do |f| %>
+  <p>
+  <%= f.input :name, placeholder: 'tell me your name'%>
+  </p>
+  <p>
+  <%= f.input :email, placeholder: 'your email address'%>
+  </p>
+  <p>
+  <%= f.association :courses, as: :check_boxes %>
+  </p>
+  <p>
+  <%= f.button :submit %>
+  </p>
+<% end %>
