@@ -38,6 +38,7 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @course.destroy
     redirect_to courses_path
+    flash[:notice] = "You successfully demolished a course!"
   end
 
   private

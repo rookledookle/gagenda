@@ -1,1 +1,3 @@
-<%= render 'categories/formcategory' %>
+<% current_user.role == "admin" %>
+  <%= render 'categories/formcategory' %>
+<% end %>

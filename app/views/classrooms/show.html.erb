@@ -4,4 +4,6 @@
 <% @classroom.courses.each do |coursename| %>
   <p><%= link_to coursename.name, course_path(coursename) %></p>
 <% end %>
-<p><%= link_to "Edit", edit_classroom_path %></p>
+<% current_user.role == "admin" %>
+  <p><%= link_to "Edit", edit_classroom_path %></p>
+<% end %>

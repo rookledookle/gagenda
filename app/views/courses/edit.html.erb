@@ -1,1 +1,3 @@
-<%= render 'courses/formcourse' %>
+<% current_user.role == "admin" %>
+  <%= render 'courses/formcourse' %>
+<% end %>

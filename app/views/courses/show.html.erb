@@ -5,7 +5,9 @@
 <p><%= @course.start_date %></p>
 <p><%= @course.end_date %></p>
 <p><%= number_to_currency(@course.price, :unit => "£", :delimiter => ",") %></p>
-<p><%= link_to "Edit", edit_course_path %></p>
-<p><%= link_to 'Destroy', course_path(@course),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
+<% if current_user.role == "admin" %>
+  <p><%= link_to "Edit", edit_course_path %></p>
+  <p><%= link_to 'Destroy', course_path(@course),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></p>
+<% end %>
