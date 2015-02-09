@@ -1,11 +1,5 @@
-require 'calendar_helper'
-
 <h3>These are all the courses</h3>
 
 <% @courses.each do |course| %>
   <p><%= link_to course.name, course_path(course) %></p>
 <% end %>
-
-<%= calendar(:year => 2015, :month => 3, :first_day_of_week => 1) do |d|
-      render_calendar_cell(d)
-    end %>
