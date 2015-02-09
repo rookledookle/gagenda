@@ -39,6 +39,7 @@ class ClassroomsController < ApplicationController
     @classroom = Classroom.find(params[:id])
     @classroom.destroy
     redirect_to classrooms_path
+    flash[:notice] = "You successfully killed an entire classroom of chairs!"
   end
 
   private

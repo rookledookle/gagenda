@@ -39,6 +39,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @course.destroy
     redirect_to categories_path
+    flash[:notice] = "You successfully demolished an entire category!"
   end
 
   private
