@@ -1,9 +1,9 @@
 <%= minimal_form_for(@course) do |f| %>
   <p>
-  <%= f.input :name %>
+  <%= f.input :name, placeholder: 'course name'%>
   </p>
   <p>
-  <%= f.input :duration %>
+  <%= f.input :duration, placeholder: 'how long is this course?'%>
   </p>
   <p>
   <%= f.input :start_date, as: :date %>
@@ -12,7 +12,7 @@
   <%= f.input :end_date, as: :date %>
   </p>
   <p>
-  <%= f.input :price %>
+  <%= f.input :price, placeholder: 'cost of course (only numerals, please)'%>
   </p>
   <p>
   <%= f.association :categories, as: :check_boxes %>

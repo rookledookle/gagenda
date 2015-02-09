@@ -1,18 +1,15 @@
-<%= form_for(@classroom) do |f| %>
+<%= minimal_form_for(@classroom) do |f| %>
 
   <p>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.input :name, placeholder: 'course name' %>
   </p>
   <p>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
+  <%= f.input :description, placeholder: 'tell me about this classroom' %>
   </p>
   <p>
-  <%= f.label :chair_rating %>
-  <%= f.text_area :chair_rating %>
+  <%= f.input :chair_rating, placeholder: 'what about the chairs? be honest.' %>
   </p>
   <p>
-  <%= f.submit %>
+  <%= f.button :submit %>
   </p>
 <% end %>
