@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   belongs_to :course
   validates :email, uniqueness: true
+  validates :email, :presence => true, :email => true
 end

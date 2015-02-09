@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "GAgenda" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,6 +12,7 @@
   </head>
 
   <body>
+
   <% if flash[:error] %>
     <div data-alert class="alert-box warning round">
       <%= flash[:error] %>
@@ -24,8 +25,11 @@
       <a href="#" class="close">&times;</a>
     </div>
   <% end %>
-
-    <%= render 'layouts/nav' %>
+    <% if user_signed_in? %>
+      <%= render 'layouts/nav' %>
+    <% else %>
+      <%= render 'layouts/navpublic' %>
+    <% end %>
     <%= yield %>
 
   </body>
