@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
  
-  get 'users/index'
 
   devise_for :users
+  get '/users/:id', to: 'users#show', as: :user_profile
   resources :classrooms
-  resources :courses
   resources :categories
+  resources :courses do
+    resources :users
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -14,7 +16,7 @@ Rails.application.routes.draw do
   root 'courses#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  # get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

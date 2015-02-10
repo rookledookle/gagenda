@@ -15,6 +15,7 @@
 <p>
 <% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  <%= link_to('Edit registration', edit_user_registration_path) %>
+  <%= link_to('Edit registration', edit_user_registration_path(current_user)) %>
+  <%= link_to('View Profile', user_profile_path(current_user)) %>
 <% end %>
 </p>

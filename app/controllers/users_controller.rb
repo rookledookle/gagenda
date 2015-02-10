@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @user = User.find(current_user[:id])
   end
 
   def edit
@@ -17,14 +17,22 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(current_user[:id])
   end
 
   def destroy
-    @classroom = Classroom.find(params[:id])
-    @classroom.destroy
-    redirect_to classrooms_path
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to courses_path
     flash[:notice] = "You successfully destroyed a user."
+  end
+
+  def book
+    @user = User.find(params[:id])
+    @course = Course.find(params[:id])
+    @user.course_id << @course.id
+    redirect_to user_path(current_user)
+    flash[:notice] = "You've booked a course!"
   end
 
   private

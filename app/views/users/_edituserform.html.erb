@@ -1,4 +1,4 @@
-<%= minimal_form_for(@user) do |f| %>
+<%= minimal_form_for(User.find(current_user)) do |f| %>
   <p>
   <%= f.input :name, placeholder: 'tell me your name'%>
   </p>
@@ -6,7 +6,10 @@
   <%= f.input :email, placeholder: 'your email address'%>
   </p>
   <p>
-  <%= f.association :courses, as: :check_boxes %>
+  <%= f.input :image, placeholder: 'profile picture'%>
+  </p>
+  <p>
+  <%= f.association :course, as: :select %>
   </p>
   <p>
   <%= f.button :submit %>
