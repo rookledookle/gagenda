@@ -1,6 +1,6 @@
 Hello <%= current_user.email %>
 <p>Name: <%= current_user.name %></p>
-<p>Image: <%= image_tag("#{current_user.image}") %></p>
+<p>Image: <%= image_tag("#{current_user.user_image}") %></p>
 <p>Email: <%= current_user.email %></p>
 <p>Courses enrolled in: <%= current_user.course_id %></p>
 <p>Account status: <%= Role.find(current_user.role_id).name.upcase %></p>

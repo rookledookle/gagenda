@@ -8,7 +8,9 @@
     <%= f.input :email, required: true %>
     <%= f.label :user_image, "Give me your FACE" %>
     <%= f.file_field :user_image %>
-    <%= f.input :remote_user_image_url, :label => "Or use a URL" %>
+    
+    <%= f.label :remote_user_image_url, "Use a URL" %>
+    <%= f.text_field :remote_user_image_url %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
