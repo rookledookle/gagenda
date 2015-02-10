@@ -2,15 +2,17 @@
 Category.delete_all
 Course.delete_all
 Classroom.delete_all
+ClassroomsCourse.delete_all
+CategoriesCourse.delete_all
 
 # CATEGORIES SEED DATA #
-ca1 = Category.create(name:"Full Stack")
-ca2 = Category.create(name:"Front-End")
-ca3 = Category.create(name:"Back-End")
-ca4 = Category.create(name:"Visual")
-ca5 = Category.create(name:"Short Courses")
-ca6 = Category.create(name:"Workshops")
-ca7 = Category.create(name:"Immersive Courses")
+ca1 = Category.create(name:"Web Development")
+ca2 = Category.create(name:"User Experience Design")
+ca3 = Category.create(name:"Visual Design")
+ca4 = Category.create(name:"Mobile Development")
+ca5 = Category.create(name:"Classes and Workshops")
+ca6 = Category.create(name:"Part-time Courses")
+ca7 = Category.create(name:"Full-time Courses")
 
 # COURSES SEED DATA #
 
