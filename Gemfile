@@ -11,6 +11,7 @@ gem 'simple_form'
 gem 'cancancan', '~> 1.10'
 gem 'carrierwave', '0.9.0'
 gem 'rmagick'
+gem 'rails_admin'
 
 gem 'jquery-rails'
 gem 'turbolinks'
