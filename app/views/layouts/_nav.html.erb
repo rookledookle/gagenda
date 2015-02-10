@@ -5,7 +5,7 @@
   <%= link_to "All Classrooms", classrooms_path %>
 </p>
 <p>
-<% if current_user.role == "admin" %>
+<% if Role.find(current_user.role_id).name == "admin" %>
   <%= link_to "New Course", new_course_path %>
   <%= link_to "New Category", new_category_path %>
   <%= link_to "New Classroom", new_classroom_path %>

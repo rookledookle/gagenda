@@ -12,9 +12,6 @@
   </head>
 
   <body>
-  <% if user_signed_in? %>
-    Currently logged in as: <%= current_user.email %>
-  <% end %>
   <% if flash[:error] %>
     <div data-alert class="alert-box warning round">
       <%= flash[:error] %>

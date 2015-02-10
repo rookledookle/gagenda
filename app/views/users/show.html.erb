@@ -1,4 +1,5 @@
-Hello <%= current_user.email %>
+<h3>Hello <%= @user.name %></h3>
+
 <p>Name: <%= current_user.name %></p>
 <p>Image: <%= image_tag("#{current_user.user_image}") %></p>
 <p>Email: <%= current_user.email %></p>
