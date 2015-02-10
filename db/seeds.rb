@@ -16,8 +16,22 @@ ca7 = Category.create(name:"Full-time Courses")
 
 # COURSES SEED DATA #
 
-co1= Course.create(name:"Web Development Immersive 11", duration:"12 Weeks", start_date:"7 Jan 2015", end_date:"3 April 2015", price:8000.00)
-co2= Course.create(name:"Web Development Immersive 12", duration:"12 Weeks", start_date:"8 March 2015", end_date:"2 June 2015", price:8000.00)
+co1= Course.create(
+  name:"Web Development Immersive 11", 
+  duration:"12 Weeks", 
+  start_date:"7 Jan 2015", 
+  end_date:"3 April 2015", 
+  start_time:0900,
+  end_time:1700,
+  price:8000.00)
+
+co2= Course.create(
+  name:"Web Development Immersive 12", 
+  duration:"12 Weeks", 
+  start_date:"8 March 2015", 
+  end_date:"2 June 2015", 
+  price:8000.00)
+
 co3= Course.create(name:"Front End Web Development 9", duration:"6 Weeks", start_date:"7 Jan 2015", end_date:"3 March 2015", price:4000.00)
 co4= Course.create(name:"Front End Web Development 10", duration:"6 Weeks", start_date:"7 Jan 2015", end_date:"2 June 2015", price:4000.00)
 co5= Course.create(name:"Back End Web Development 2", duration:"6 Weeks", start_date:"7 Jan 2015", end_date:"2 June 2015", price:5000.00)
