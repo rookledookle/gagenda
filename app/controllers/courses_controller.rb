@@ -23,7 +23,7 @@ class CoursesController < ApplicationController
 
   def update
     @course = Course.find(params[:id])
-    @course.update!(course_params)
+    @course.update(course_params)
     if @course.save
       redirect_to course_path(@course)
       flash[:notice] = "You successfully updated a course!"
@@ -43,6 +43,6 @@ class CoursesController < ApplicationController
 
   private
   def course_params
-    params.require(:course).permit(:name, :duration, :start_date, :end_date, :price)
+    params.require(:course).permit(:name, :duration, :start_date, :end_date, :price, :user_id)
   end
 end

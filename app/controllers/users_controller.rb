@@ -30,8 +30,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.find(current_user[:id])
-    redirect_to course_users_path(current_user)
-    flash[:notice] = "You've booked a course!"
+    @course = Course.find(params[:course_id])
   end
 
   private
