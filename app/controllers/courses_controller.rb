@@ -5,10 +5,12 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
+    @course.users.user_id.build
   end
 
   def create
     @course = Course.create(course_params)
+    @course.user_id = current_user.id
     if @course.save
       redirect_to course_path(@course) 
       flash[:notice] = "You successfully created a course!"
@@ -23,10 +25,12 @@ class CoursesController < ApplicationController
 
   def update
     @course = Course.find(params[:id])
-    @course.update(course_params)
-    if @course.save
+    if @course.users.update_attributes(user_params)
       redirect_to course_path(@course)
       flash[:notice] = "You successfully updated a course!"
+    else
+      redirect_to :back
+      flash[:error] = "Error"
     end
   end
 
@@ -43,6 +47,10 @@ class CoursesController < ApplicationController
 
   private
   def course_params
-    params.require(:course).permit(:name, :duration, :start_date, :end_date, :price, :user_id)
+    params.require(:course).permit(:name, :duration, :start_date, :end_date, :price, {user_id:[]})
+  end
+
+  def user_params
+    params.require(:user).permit(:user_id)
   end
 end

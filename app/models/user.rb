@@ -10,7 +10,8 @@ class User < ActiveRecord::Base
     self.role ||= Role.find_by_name('registered')
   end
 
-  belongs_to :course
+  has_many :courses, through: :courses_users
+  has_many :courses_users
   has_many :students, class_name:"User", foreign_key:"instructor_id"
   has_many :instructors, class_name:"User", foreign_key:"student_id"
 

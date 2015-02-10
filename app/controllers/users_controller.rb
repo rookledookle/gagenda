@@ -30,7 +30,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.find(current_user[:id])
-    @course = Course.find(params[:course_id])
   end
 
   private
