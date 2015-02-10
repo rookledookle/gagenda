@@ -9,7 +9,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'foundation-rails'
 gem 'simple_form'
 gem 'cancancan', '~> 1.10'
-
+gem 'carrierwave', '0.9.0'
+gem 'rmagick'
 
 gem 'jquery-rails'
 gem 'turbolinks'
