@@ -12,6 +12,8 @@ gem 'cancancan', '~> 1.10'
 gem 'carrierwave', '0.9.0'
 gem 'rmagick'
 gem 'rails_admin'
+gem 'devise'
+
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -25,7 +27,6 @@ group :development, :test do
   gem 'business_time'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'devise'
   gem 'dynamic_form'
 end
 
