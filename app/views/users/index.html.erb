@@ -1,0 +1,5 @@
+<h4>All instructors</h4>
+
+<%= User.where(role_id=4).each do |user| %>
+  <%= user.name %>
+<% end %>
