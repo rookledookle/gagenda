@@ -6,52 +6,204 @@ ClassroomsCourse.delete_all
 CategoriesCourse.delete_all
 
 # CATEGORIES SEED DATA #
-ca1 = Category.create(name:"Web Development")
-ca2 = Category.create(name:"User Experience Design")
-ca3 = Category.create(name:"Visual Design")
-ca4 = Category.create(name:"Mobile Development")
-ca5 = Category.create(name:"Classes and Workshops")
-ca6 = Category.create(name:"Part-time Courses")
-ca7 = Category.create(name:"Full-time Courses")
+ca1 = Category.create(name:"Web Development", about:"Entrepreneur integrate grok workflow driven quantitative vs. qualitative quantitative vs. qualitative long shadow convergence. Entrepreneur user centered design latte pivot paradigm thought leader sticky note. Paradigm entrepreneur agile food-truck intuitive bootstrapping pair programming driven user story grok workflow innovate. Latte prototype hacker long shadow moleskine ideate SpaceTeam.")
+ca2 = Category.create(name:"User Experience Design", about:"Entrepreneur integrate grok workflow driven quantitative vs. qualitative quantitative vs. qualitative long shadow convergence. Entrepreneur user centered design latte pivot paradigm thought leader sticky note. Paradigm entrepreneur agile food-truck intuitive bootstrapping pair programming driven user story grok workflow innovate. Latte prototype hacker long shadow moleskine ideate SpaceTeam.")
+ca3 = Category.create(name:"Visual Design", about:"Entrepreneur integrate grok workflow driven quantitative vs. qualitative quantitative vs. qualitative long shadow convergence. Entrepreneur user centered design latte pivot paradigm thought leader sticky note. Paradigm entrepreneur agile food-truck intuitive bootstrapping pair programming driven user story grok workflow innovate. Latte prototype hacker long shadow moleskine ideate SpaceTeam.")
+ca4 = Category.create(name:"Mobile Development", about:"Entrepreneur integrate grok workflow driven quantitative vs. qualitative quantitative vs. qualitative long shadow convergence. Entrepreneur user centered design latte pivot paradigm thought leader sticky note. Paradigm entrepreneur agile food-truck intuitive bootstrapping pair programming driven user story grok workflow innovate. Latte prototype hacker long shadow moleskine ideate SpaceTeam.")
+ca5 = Category.create(name:"Part-time Courses", about:"Entrepreneur integrate grok workflow driven quantitative vs. qualitative quantitative vs. qualitative long shadow convergence. Entrepreneur user centered design latte pivot paradigm thought leader sticky note. Paradigm entrepreneur agile food-truck intuitive bootstrapping pair programming driven user story grok workflow innovate. Latte prototype hacker long shadow moleskine ideate SpaceTeam.")
+ca6 = Category.create(name:"Full-time Courses", about:"Entrepreneur integrate grok workflow driven quantitative vs. qualitative quantitative vs. qualitative long shadow convergence. Entrepreneur user centered design latte pivot paradigm thought leader sticky note. Paradigm entrepreneur agile food-truck intuitive bootstrapping pair programming driven user story grok workflow innovate. Latte prototype hacker long shadow moleskine ideate SpaceTeam.")
 
 # COURSES SEED DATA #
-
+# Full-time Course #
 co1= Course.create(
-  name:"Web Development Immersive 11", 
-  duration:"12 Weeks", 
-  start_date:"7 Jan 2015", 
-  end_date:"3 April 2015", 
-  start_time:0900,
-  end_time:1700,
-  price:8000.00)
+  name:"Web Development Immersive 13", 
+  duration:"12 Weeks",
+  start_date:"1 March 2015",
+  end_date:"1 June 2015",
+  start_time:"9:00",
+  end_time:"17:00",
+  price:8000.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
 
 co2= Course.create(
-  name:"Web Development Immersive 12", 
-  duration:"12 Weeks", 
-  start_date:"8 March 2015", 
-  end_date:"2 June 2015", 
-  price:8000.00)
+  name:"Web Development Immersive 14", 
+  duration:"12 Weeks",
+  start_date:"1 May 2015",
+  end_date:"1 August 2015",
+  start_time:"9:00",
+  end_time:"17:00",
+  price:8000.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
 
-co3= Course.create(name:"Front End Web Development 9", duration:"6 Weeks", start_date:"7 Jan 2015", end_date:"3 March 2015", price:4000.00)
-co4= Course.create(name:"Front End Web Development 10", duration:"6 Weeks", start_date:"7 Jan 2015", end_date:"2 June 2015", price:4000.00)
-co5= Course.create(name:"Back End Web Development 2", duration:"6 Weeks", start_date:"7 Jan 2015", end_date:"2 June 2015", price:5000.00)
-co6= Course.create(name:"Back End Web Development 3", duration:"6 Weeks", start_date:"7 Jan 2015", end_date:"2 June 2015", price:5000.00)
-co7= Course.create(name:"Adobe Photoshop Bootcamp", duration:"1 Week", start_date:"7 Jan 2015", end_date:"2 June 2015", price:500.00)
-co8= Course.create(name:"Adobe Illustrator Bootcamp", duration:"1 Week", start_date:"7 Jan 2015", end_date:"2 June 2015", price:500.00)
-co9= Course.create(name:"Adobe InDesign Bootcamp", duration:"1 Week", start_date:"7 Jan 2015", end_date:"2 June 2015", price:500.00)
-co10= Course.create(name:"Adobe AfterEffects Bootcamp", duration:"2 Weeks", start_date:"7 Jan 2015", end_date:"2 June 2015", price:900.00)
-co11= Course.create(name:"Final Cut Pro Bootcamp", duration:"2 Weeks", start_date:"7 Jan 2015", end_date:"2 June 2015", price:1000.00)
-co12= Course.create(name:"User Experience Design Immersive 4", duration:"10 Weeks", start_date:"7 Jan 2015", end_date:"3 April 2015", price:5500.00)
-co13= Course.create(name:"User Experience Design Immersive 5", duration:"10 Weeks", start_date:"7 Jan 2015", end_date:"2 June 2015", price:5500.00)
+co3= Course.create(
+  name:"User Experience Design Immersive 8", 
+  duration:"12 Weeks",
+  start_date:"1 March 2015",
+  end_date:"1 June 2015",
+  start_time:"9:00",
+  end_time:"17:00",
+  price:7200.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co4= Course.create(
+  name:"User Experience Design Immersive 9", 
+  duration:"12 Weeks",
+  start_date:"1 May 2015",
+  end_date:"1 August 2015",
+  start_time:"9:00",
+  end_time:"17:00",
+  price:7200.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co5= Course.create(
+  name:"Adobe Suite Immersive 1", 
+  duration:"12 Weeks",
+  start_date:"15 March 2015",
+  end_date:"15 June 2015",
+  start_time:"9:00",
+  end_time:"17:00",
+  price:6000.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co6= Course.create(
+  name:"Adobe Suite Immersive 2", 
+  duration:"12 Weeks",
+  start_date:"15 May 2015",
+  end_date:"15 August 2015",
+  start_time:"9:00",
+  end_time:"17:00",
+  price:6000.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co7= Course.create(
+  name:"Cross-platform Mobile Development Immersive 1", 
+  duration:"12 Weeks",
+  start_date:"2 June 2015",
+  end_date:"2 September 2015",
+  start_time:"9:00",
+  end_time:"17:00",
+  price:8000.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co8= Course.create(
+  name:"Cross-platform Mobile Development Immersive 2", 
+  duration:"12 Weeks",
+  start_date:"2 July 2015",
+  end_date:"2 October 2015",
+  start_time:"9:00",
+  end_time:"17:00",
+  price:8000.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+# Part-time Courses #
+co9= Course.create(
+  name:"Adobe Photoshop Crash Course", 
+  duration:"8 Weeks",
+  start_date:"1 March 2015",
+  end_date:"1 May 2015",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:3500.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co10= Course.create(
+  name:"Adobe After Effects Crash Course", 
+  duration:"8 Weeks",
+  start_date:"1 May 2015",
+  end_date:"1 July 2015",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:3500.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co11= Course.create(
+  name:"Adobe InDesign Crash Course", 
+  duration:"8 Weeks",
+  start_date:"1 July 2015",
+  end_date:"1 September 2015",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:3500.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co12= Course.create(
+  name:"Final Cut Pro Crash Course", 
+  duration:"8 Weeks",
+  start_date:"1 September 2015",
+  end_date:"1 November 2015",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:3500.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co13= Course.create(
+  name:"Front End Web Development III", 
+  duration:"8 Weeks",
+  start_date:"15 March 2015",
+  end_date:"15 May 2015",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:4000.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co14= Course.create(
+  name:"Front End Web Development IV", 
+  duration:"8 Weeks",
+  start_date:"15 May 2015",
+  end_date:"15 July 2015",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:4000.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co15= Course.create(
+  name:"Mobile Game Development I", 
+  duration:"8 Weeks",
+  start_date:"15 July 2015",
+  end_date:"15 September 2015",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:4500.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co16= Course.create(
+  name:"Mobile Game Development II", 
+  duration:"8 Weeks",
+  start_date:"15 September 2015",
+  end_date:"15 November 2015",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:4500.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co17= Course.create(
+  name:"Interactive UX Design II", 
+  duration:"8 Weeks",
+  start_date:"15 November 2015",
+  end_date:"15 January 2016",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:4800.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
+co18= Course.create(
+  name:"Interactive UX Design III", 
+  duration:"8 Weeks",
+  start_date:"15 January 2016",
+  end_date:"15 March 2016",
+  start_time:"18:00",
+  end_time:"21:00",
+  price:4800.00,
+  about:"Driven integrate workflow eiusmod ideate ex incididunt in in physical computing enim. Food-truck agile viral cillum thinker-maker-doer velit cupidatat irure 360 campaign commodo anim parallax. Waterfall is so 2000 and late veniam aliquip voluptate consectetur ship it user centered design moleskine nisi voluptate sticky note est. Food-truck workflow quantitative vs. qualitative pivot pariatur ship it bootstrapping pivot ut intuitive esse entrepreneur. Food-truck est veniam elit pitch deck pitch deck waterfall is so 2000 and late in big data actionable insight id convergence.")
+
 
 # CATEGORIES & COURSES #
-ca1.courses = [co1,co2]
-ca2.courses = [co3,co4]
-ca3.courses = [co5,co6]
-ca4.courses = [co7,co8,co9,co10,co11]
-ca5.courses = [co10,co11]
-ca6.courses = [co7,co8,co9]
-ca7.courses = [co1,co2,co12,co13]
+ca1.courses = [co3,co4,co17,co18]
+ca2.courses = [co1,co2,co13,co14]
+ca3.courses = [co5,co6,co9,co10,co11,co12]
+ca4.courses = [co7,co8,co15,co16]
+ca5.courses = [co9,co10,co11,co12,co13,co14,co15,co16,co17,co18]
+ca6.courses = [co1,co2,co3,co4,co5,co6,co7,co8]
 
 # CLASSROOMS SEED DATA #
 cl1 = Classroom.create(name:"Burnt Sienna", description:"This classroom has the capacity of 23 adults or 20 adults and 4 very small adults. Heating in the winter and AC in the summer.", chair_rating:"As the name suggests, all chairs are wooden, pretentious and aesthetically pleasing. Only 11 out of 25 chairs are unbearable.")
@@ -62,13 +214,12 @@ cl5 = Classroom.create(name:"Burgundy", description:"Screening room. Great for p
 cl6 = Classroom.create(name:"Mint", description:"Bare-boned. State-of-the-art projector. Minimalistic.", chair_rating:"Only transparent plastic chairs with metal legs allowed.")
 
 # COURSES & CLASSROOMS #
-cl1.courses = [co1,co2,co12]
-cl2.courses = [co9]
-cl3.courses = [co1,co2,co12,co13]
-cl4.courses = [co13,co5,co6]
-cl5.courses = [co3,co4]
-cl6.courses = [co7,co8,co10,co11]
-
+cl1.courses = [co1,co7,co10]
+cl2.courses = [co2,co9,co11]
+cl3.courses = [co3,co8,co12]
+cl4.courses = [co4,co13,co16]
+cl5.courses = [co5,co14,co17]
+cl6.courses = [co6,co15,co18]
 
 ['registered', 'banned', 'admin'].each do |role|
   Role.find_or_create_by({name: role})
