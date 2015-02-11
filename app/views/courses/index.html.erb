@@ -2,4 +2,5 @@
 
 <% @courses.each do |course| %>
   <p><%= link_to course.name, course_path(course) %></p>
+  <p><%= truncate(course.about, length: 200, omission: '...! ') {link_to "continue", course_path(course)} %></p>
 <% end %>

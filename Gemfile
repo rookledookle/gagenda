@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'cancancan', '~> 1.10'
 gem 'carrierwave', '0.9.0'
 gem 'rmagick'
+gem 'fog'
 gem 'rails_admin'
 gem 'devise'
 gem 'dynamic_form'
@@ -29,8 +30,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-
-
 
 end
 

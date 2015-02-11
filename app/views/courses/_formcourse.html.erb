@@ -6,13 +6,22 @@
   <%= f.input :duration, placeholder: 'how long is this course?'%>
   </p>
   <p>
-  <%= f.input :start_date, as: :date %>
+  <%= f.input :start_date, as: :date, placeholder: 'start date' %>
   </p>
   <p>
-  <%= f.input :end_date, as: :date %>
+  <%= f.input :end_date, as: :date, placeholder: 'end date' %>
+  </p>
+  <p>
+  <%= f.input :start_time, as: :time, placeholder: 'start time' %>
+  </p>
+  <p>
+  <%= f.input :end_time, as: :time, placeholder: 'end time' %>
   </p>
   <p>
   <%= f.input :price, placeholder: 'cost of course (only numerals, please)'%>
+  </p>
+  <p>
+  <%= f.input :about, as: :text, placeholder: 'course description'%>
   </p>
   <p>
   <%= f.association :categories, as: :check_boxes %>

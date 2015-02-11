@@ -5,7 +5,6 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
-    @course.users.user_id.build
   end
 
   def create

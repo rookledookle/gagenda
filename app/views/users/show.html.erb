@@ -3,7 +3,11 @@
 <p>Name: <%= current_user.name %></p>
 <p>Image: <%= image_tag("#{current_user.user_image}") %></p>
 <p>Email: <%= current_user.email %></p>
-<p>Courses enrolled in: <%= current_user.course_id %></p>
+<p>
+Courses enrolled in: 
+<% @enrolled = CoursesUser.find_by user_id: current_user.id %>
+<%= Course.find(@enrolled.course_id).name %>
+</p>
 <p>Account status: <%= Role.find(current_user.role_id).name.upcase %></p>
 <p>Account made on: <%= current_user.created_at %></p>
 
