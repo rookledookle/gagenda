@@ -1,30 +1,41 @@
-<h3>Hello <%= current_user.name %></h3>
+<div class="profile">
+  <div class="greeting">
+  <% if Time.now < "12:00" %>
+    <h3>GOOD MORNING, <%= current_user.name.upcase %>!</h3>
+  <% elsif Time.now >= "17:00" %>
+    <h3>GOOD EVENING, <%= current_user.name.upcase %>!</h3>
+  <% else Time.now >= "12:00" %>
+    <h3>GOOD AFTERNOON, <%= current_user.name.upcase %>!</h3>
+  <% end %>
+  </div>
 
-<p>Name: <%= current_user.name %></p>
-<p>Image: <%= image_tag("#{current_user.user_image.detail.url}") %></p>
-<p>Email: <%= current_user.email %></p>
-<% if current_user.role_id == 1 %> 
+
+  <p>Name: <%= current_user.name %></p>
+  <p>Image: <%= image_tag("#{current_user.user_image.detail.url}") %></p>
+  <p>Email: <%= current_user.email %></p>
+  <% if current_user.role_id == 1 %> 
+    <p>
+    Courses enrolled in: 
+    <% @enrolled = CoursesUser.find_by user_id: current_user.id %>
+    <% if @enrolled.present? %>
+      <%= Course.find(@enrolled.course_id).name %>
+    <% end %>
+    </p>
+  <% end %>
+
+  <% if current_user.role_id == 4 %>
   <p>
-  Courses enrolled in: 
-  <% @enrolled = CoursesUser.find_by user_id: current_user.id %>
-  <% if @enrolled.present? %>
-    <%= Course.find(@enrolled.course_id).name %>
-  <% end %>
+    Courses teaching:
+    <% @teaching = CoursesUser.find_by user_id: current_user.id %>
+    <% if @teaching.present? %>
+      <%= Course.find(@teaching.course_id).name %>
+    <% end %>
+    </p>
   </p>
-<% end %>
-
-<% if current_user.role_id == 4 %>
-<p>
-  Courses teaching:
-  <% @teaching = CoursesUser.find_by user_id: current_user.id %>
-  <% if @teaching.present? %>
-    <%= Course.find(@teaching.course_id).name %>
   <% end %>
-  </p>
-</p>
-<% end %>
-  
-<p>Account status: <%= Role.find(current_user.role_id).name.upcase %></p>
-<p>Account made on: <%= current_user.created_at %></p>
+    
+  <p>Account status: <%= Role.find(current_user.role_id).name.upcase %></p>
+  <p>Account made on: <%= current_user.created_at %></p>
 
-<p><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></p>
+  <p><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></p>
+</div>

@@ -1,5 +1,16 @@
-<h3>Nav Public</h3>
+<div class="publictopbar">
+  <nav class="top-bar" data-topbar role="navigation">
+    <div class="pubnav">
+      <ul>  
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Signup", new_user_registration_path %></li>
+        <li><%= link_to "Courses", courses_path %></li>
+      </ul>
+    </nav>
 
-<%= link_to "Login", new_user_session_path %>
-<%= link_to "Signup", new_user_registration_path %>
-<%= link_to "View Courses", courses_path %>
+    <div class="publicnavlogo">
+      <%= image_tag("logo.png", size:"60x60") %>
+    </div>
+    </div>
+  </nav>
+</div>

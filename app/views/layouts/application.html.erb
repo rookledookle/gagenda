@@ -2,13 +2,12 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title><%= content_for?(:title) ? yield(:title) : "GAgenda" %></title>
-
-    <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,100italic,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>    <%= stylesheet_link_tag "application" %>
   </head>
 
   <body>
@@ -24,12 +23,11 @@
       <a href="#" class="close">&times;</a>
     </div>
   <% end %>
+    <%= yield %>
     <% if user_signed_in? %>
       <%= render 'layouts/nav' %>
     <% else %>
       <%= render 'layouts/navpublic' %>
     <% end %>
-    <%= yield %>
-
   </body>
 </html>

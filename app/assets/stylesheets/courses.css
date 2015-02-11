@@ -1,0 +1,18 @@
+.courseindex {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.courseindextitle {
+  font-weight: 300;
+  font-size: 35px;
+}
+
+.courseindex h4 {
+  font-size: 20px;
+}
+
+.course {
+  width: 400px;
+  margin: 0 auto;
+}

@@ -1,0 +1,62 @@
+/*LOG IN AND SIGN UP (PUBLIC)*/
+.signup-header, .login-header {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.login, .signup, input.button {
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 5px 20px;
+}
+
+.sharedlinks {
+  font-size: 15px;
+}
+
+.login, .signup{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 50px;
+}
+
+.login {
+  margin-top: 100px;
+}
+
+.publictopbar .row {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+input#user_remember_me {
+  margin-right: 10px;
+}
+
+/*PUBLIC NAV*/
+
+.publictopbar .top-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-left: -20px;
+  height: 39px;
+}
+
+.pubnav li {
+  list-style-type: none;
+  display: inline;
+  margin: 0px 20px 0px 20px;
+}
+
+.publicnavlogo {
+  position:fixed;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.pubnav ul {
+  margin-top: 7px;
+}

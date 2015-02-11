@@ -1,24 +1,27 @@
-<h3>Nav Bar</h3>
-<p>currently logged in as: <%= current_user.email %></p>
-<p>
-  <%= link_to "All Courses", courses_path %>
-  <%= link_to "All Categories", categories_path %>
-  <%= link_to "All Classrooms", classrooms_path %>
-</p>
-<p>
-<% if Role.find(current_user.role_id).name == "admin" %>
-  <%= link_to "New Course", new_course_path %>
-  <%= link_to "New Category", new_category_path %>
-  <%= link_to "New Classroom", new_classroom_path %>
-<% end %>
-</p>
+<div class="privatetopbar">
+  <nav class="top-bar" data-topbar role="navigation">
+    <div class="nav">
+          <ul>
+            <li><%= link_to "Create New" %></li>
+            <li><%= link_to "Directory" %></li>
+<!--             <li><%= link_to "New Course", new_course_path %></li>
+            <li><%= link_to "New Category", new_category_path %></li>
+            <li><%= link_to "New Classroom", new_classroom_path %></li> -->
+        <!-- <li><%= link_to "Courses", courses_path %></li>
+        <li><%= link_to "Categories", categories_path %></li>
+        <li><%= link_to "Classrooms", classrooms_path %></li> -->
 
-<p>
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  <%= link_to('Edit registration', edit_user_registration_path(current_user)) %>
-  <%= link_to('View Profile', user_profile_path(current_user)) %>
-  <%= link_to('Instructors', instructor_profiles_path) %>
-
-<% end %>
-</p>
+        <% if Role.find(current_user.role_id).name == "admin" %>
+      
+        <% end %>
+        <% if user_signed_in? %>
+        <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+<!--         <li><%= link_to('Edit registration', edit_user_registration_path(current_user)) %></li>
+ -->        <li><%= link_to('View Profile', user_profile_path(current_user)) %></li>
+<!--         <li><%= link_to('Instructors', instructor_profiles_path) %></li> -->
+        <% end %>
+        <%= current_user.name %>
+    </ul>
+    </div>
+  </nav>
+</div>

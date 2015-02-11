@@ -1,6 +1,9 @@
-<h3>These are all the courses</h3>
-
-<% @courses.each do |course| %>
-  <p><%= link_to course.name, course_path(course) %></p>
-  <p><%= truncate(course.about, length: 200, omission: '...! ') {link_to "continue", course_path(course)} %></p>
-<% end %>
+<div class="courseindex">
+  <h3 class="courseindextitle">Here are our courses.</h3>
+    <% @courses.each do |course| %>
+    <div class="course">
+      <h4><%= link_to course.name, course_path(course) %></h4>
+      <p><%= truncate(course.about, length: 200, omission: '...! ') {link_to "continue", course_path(course)} %></p>
+    </div>
+  <% end %>
+</div>
