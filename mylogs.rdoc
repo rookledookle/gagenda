@@ -15,3 +15,13 @@
 9 Feb 9:43pm
 - removed calendar-helper gem 
 - added foundation gem and installed it
+
+11 Feb 12:09pm
+things that are working
+- course booking
+- profile view and editing
+- rails admin
+- permissions
+- upload image/ remote image URL
+- view enrolled courses
+

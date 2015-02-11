@@ -224,3 +224,63 @@ cl6.courses = [co6,co15,co18]
 ['registered', 'banned', 'admin'].each do |role|
   Role.find_or_create_by({name: role})
 end
+
+# USERS #
+# Instructors #
+u1 = User.create(name:'Clyde', email:'clyde@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u2 = User.create(name:'Ash', email:'ash@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u3 = User.create(name:'Beckett', email:'beckett@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u4 = User.create(name:'Bronwyn', email:'bronwyn@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u5 = User.create(name:'Cruz', email:'cruz@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u6 = User.create(name:'Delaney', email:'delaney@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u7 = User.create(name:'Levi', email:'levi@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u8 = User.create(name:'Ned', email:'ned@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u9 = User.create(name:'Felix', email:'felix@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u10 = User.create(name:'Angelica', email:'angelica@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u11 = User.create(name:'Mae', email:'mae@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u12 = User.create(name:'Camilla', email:'camilla@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u13 = User.create(name:'Faye', email:'faye@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u14 = User.create(name:'Wylie', email:'wylie@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u15 = User.create(name:'Cade', email:'cade@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u16 = User.create(name:'Landon', email:'landon@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u17 = User.create(name:'Truman', email:'truman@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u18 = User.create(name:'Bob', email:'bob@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u19 = User.create(name:'Dick', email:'dick@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+u20 = User.create(name:'Tod', email:'tod@ga.com', password: 'password',password_confirmation: 'password', role_id:4)
+
+# Students #
+u21 = User.create(name:'Tally', email:'tally@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u22 = User.create(name:'Berry', email:'berry@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u23 = User.create(name:'Magnolia', email:'magnolia@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u24 = User.create(name:'Lucienne', email:'lucienne@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u25 = User.create(name:'Rhys', email:'rhys@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u26 = User.create(name:'Henry', email:'henry@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u27 = User.create(name:'Darrion', email:'darrion@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u28 = User.create(name:'Wart', email:'wart@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u29 = User.create(name:'Emery', email:'emery@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u30 = User.create(name:'Indya', email:'indya@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u31 = User.create(name:'Haroun', email:'haroun@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u32 = User.create(name:'Piano', email:'piano@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u33 = User.create(name:'Manolo', email:'manolo@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u34 = User.create(name:'Ayn', email:'ayn@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u35 = User.create(name:'Isolde', email:'isolde@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u36 = User.create(name:'Robert', email:'robert@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u37 = User.create(name:'Lennon', email:'lennon@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u38 = User.create(name:'Clay', email:'clays@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u39 = User.create(name:'Bowie', email:'bowie@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u40 = User.create(name:'Rex', email:'rex@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u41 = User.create(name:'Coy', email:'coy@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u42 = User.create(name:'Cash', email:'cash@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u43 = User.create(name:'Amedeo', email:'amedeo@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u44 = User.create(name:'Kai', email:'kai@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u45 = User.create(name:'Hiro', email:'hiro@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u46 = User.create(name:'Robin', email:'robin@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u47 = User.create(name:'Erik', email:'erik@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u48 = User.create(name:'Lua', email:'lua@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u49 = User.create(name:'Georgette', email:'georgette@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+u50 = User.create(name:'Bruno', email:'bruno@gmail.com', password: 'password',password_confirmation: 'password', role_id:4)
+
+
+
+
+
