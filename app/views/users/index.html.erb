@@ -3,6 +3,7 @@
 <% @users.each do |user| %>
   <% if user.role_id == 4 %>
     <p><%= user.name %></p>
+    <p><%= user.email %></p>
     <p><%= user.bio %></p>
   <% end %>
 <% end %>
