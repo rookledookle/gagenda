@@ -17,4 +17,7 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
 
+  mount_uploader :user_image, UserImageUploader
+
+
 end
