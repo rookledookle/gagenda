@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   get '/users/:id', to: 'users#show', as: :user_profile
+  get '/users', to: 'users#index', as: :instructor_profiles
   resources :classrooms
   resources :categories
   resources :courses do

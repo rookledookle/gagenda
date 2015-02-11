@@ -1,5 +1,8 @@
 <h4>All instructors</h4>
 
-<%= User.where(role_id=4).each do |user| %>
-  <%= user.name %>
+<% @users.each do |user| %>
+  <% if user.role_id == 4 %>
+    <p><%= user.name %></p>
+    <p><%= user.bio %></p>
+  <% end %>
 <% end %>
