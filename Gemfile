@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
+ruby '2.1.4'
 
+gem 'rails_12factor', group: :production
 
 gem 'rails', '4.2.0'
 gem 'pg'
@@ -13,7 +15,8 @@ gem 'carrierwave', '0.9.0'
 gem 'rmagick'
 gem 'rails_admin'
 gem 'devise'
-
+gem 'dynamic_form'
+gem 'business_time'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -24,9 +27,10 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'business_time'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'dynamic_form'
+
+
+
 end
 
