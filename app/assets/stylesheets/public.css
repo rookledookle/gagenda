@@ -16,7 +16,7 @@
   font-size: 15px;
 }
 
-.login, .signup{
+.login, .signup, .profileedit{
   text-align: center;
   font-family: 'Roboto', sans-serif;
   margin-top: 50px;
@@ -26,7 +26,7 @@
   margin-top: 100px;
 }
 
-.publictopbar .row {
+.publictopbar, .profileedit .row {
   max-width: 480px;
   margin: 0 auto;
 }

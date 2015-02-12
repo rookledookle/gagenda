@@ -4,6 +4,9 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
+  def directory
+  end
+
   def new
     @category = Category.new
   end

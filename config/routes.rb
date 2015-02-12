@@ -3,10 +3,12 @@ Rails.application.routes.draw do
     root 'devise/registrations#new'
   end
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get '/users/:id', to: 'users#show', as: :user_profile
   get '/instructors', to: 'users#index', as: :instructor_profiles
+  get '/directory', to: 'categories#directory', as: :directory
   resources :classrooms
   resources :categories
   resources :courses do

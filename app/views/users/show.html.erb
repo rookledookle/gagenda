@@ -1,17 +1,18 @@
 <div class="profile">
+  <div class="profileside">
   <div class="greeting">
   <% if Time.now < "12:00" %>
-    <h3>GOOD MORNING, <%= current_user.name.upcase %>!</h3>
+    <h3><span>Good morning,</span> <%= current_user.name.upcase %>!</h3>
   <% elsif Time.now >= "17:00" %>
-    <h3>GOOD EVENING, <%= current_user.name.upcase %>!</h3>
+    <h3><span>Good evening,</span> <%= current_user.name.upcase %>!</h3>
   <% else Time.now >= "12:00" %>
-    <h3>GOOD AFTERNOON, <%= current_user.name.upcase %>!</h3>
+    <h3><span>Good afternoon,</span> <%= current_user.name.upcase %>!</h3>
   <% end %>
   </div>
+  <p class="userimage"><%= image_tag("#{current_user.user_image.thumb.url}") %></p>
+  </div>
 
-
-  <p>Name: <%= current_user.name %></p>
-  <p>Image: <%= image_tag("#{current_user.user_image.detail.url}") %></p>
+  <div class="profileright">
   <p>Email: <%= current_user.email %></p>
   <% if current_user.role_id == 1 %> 
     <p>
@@ -38,4 +39,5 @@
   <p>Account made on: <%= current_user.created_at %></p>
 
   <p><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></p>
+  </div>
 </div>

@@ -1,31 +1,121 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+ <div class="profileedit">
+  <h3 class="signup-header">Tweaking your profile details.</h3>
+    <div class="signup-body">
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+<div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Name</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.text_field :name, required: true, autofocus:true %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <div class="form-inputs">
-    <%= f.input :name, required: true, autofocus:true %>
-    <%= f.input :email, required: true %>
-    <%= f.input :user_image, as: :file %>
-    <%= f.label :remote_user_image_url, "or use a URL" %>
-    <%= f.text_field :remote_user_image_url %>  
+    <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Email</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.text_field :email, required: true %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Upload a Profile Picture</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.file_field :user_image, as: :file %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Or use a URL</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.text_field :remote_user_image_url %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">New Password</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.text_field :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Confirm New Password</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.text_field :password_confirmation, required: false %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Current Password</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.text_field :current_password, hint: "we need your current password to confirm your changes", required: true %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
   
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+    <div class="form-actions">
+      <%= f.button :submit, "Change me." %>
+    </div>
+  <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+  <h3 class="signup-header">Erase me.</h3>
+    <p>Goodbye cruel world. <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you super sure?" }, method: :delete %></p>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>

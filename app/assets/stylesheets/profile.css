@@ -1,5 +1,37 @@
+.profileedit {
+  margin-bottom: 100px;
+}
 .profile {
-  font-family: 'Roboto';
-  letter-spacing: 3px;
+  font-family: 'Roboto', sans-serif;
   margin: 50px 100px 50px 100px;
+}
+
+.greeting h3 {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 3px;
+  font-size: 38px;
+  font-weight: 300;
+}
+
+.greeting span {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  letter-spacing: 0px;
+  font-size: 44px;
+  letter-spacing: 2px;
+}
+
+.userimage img {
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+}
+
+.profileside {
+  float: left;
+  position: fixed;
+}
+
+.profileright {
+  float: right;
+  font-size: 40px;
 }
