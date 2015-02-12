@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'errors/file_not_found'
+
   devise_scope :user do
     root 'courses#welcome'
   end
@@ -10,6 +12,12 @@ Rails.application.routes.draw do
   get '/instructors', to: 'users#index', as: :instructor_profiles
   get '/directory', to: 'categories#directory', as: :directory
   get '/welcome', to: 'courses#welcome', as: :welcome
+  get '/creatething', to: 'courses#creatething', as: :create_thing
+  get '/sitemap', to: 'courses#sitemap', as: :site_map
+
+  match '/404', to: 'errors#file_not_found', via: :all
+  match '/422', to: 'errors#unprocessable', via: :all
+  match '/500', to: 'errors#internal_server_error', via: :all
 
   resources :classrooms
   resources :categories

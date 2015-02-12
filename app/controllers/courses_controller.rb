@@ -3,6 +3,10 @@ class CoursesController < ApplicationController
     @courses = Course.all
   end
 
+
+  def creatething
+  end
+
   def new
     @course = Course.new
   end

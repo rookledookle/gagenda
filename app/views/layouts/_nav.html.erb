@@ -3,15 +3,13 @@
     <div class="nav">
           <ul>
             <li><%= link_to "DIRECTORY", directory_path %></li>
-<!--             <li><%= link_to "New Course", new_course_path %></li>
-            <li><%= link_to "New Category", new_category_path %></li>
-            <li><%= link_to "New Classroom", new_classroom_path %></li> -->
-        <!-- <li><%= link_to "Courses", courses_path %></li>
+            <li><%= link_to "SITE MAP", sitemap_path %></li>
+<!-- 
         <li><%= link_to "Categories", categories_path %></li>
         <li><%= link_to "Classrooms", classrooms_path %></li> -->
 
         <% if Role.find(current_user.role_id).name == "admin" %>
-      <li><%= link_to "CREATE",  %></li>
+      <li><%= link_to "CREATE", create_thing_path %></li>
         <% end %>
       <% if user_signed_in? %>
         <li><%= link_to('LOG OUT', destroy_user_session_path) %></li>
