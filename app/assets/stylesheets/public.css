@@ -12,6 +12,10 @@ body {
   color: #E4EFF6;
 }
 
+.login-header {
+  font-size: 60px;
+}
+
 .login, .signup, input.button {
   border-radius: 3px;
   font-family: 'Roboto', sans-serif;
@@ -24,8 +28,20 @@ body {
   padding-top: 100px;
 }
 
+.login {
+  padding-top: 50px;
+}
+
 .sharedlinks {
   font-size: 15px;
+}
+
+.sharedlinks a:hover {
+  color: #E3B1AB;
+}
+
+.pubnav a:hover {
+  color:#FF0038;
 }
 
 .login, .signup, .profileedit{
@@ -37,9 +53,14 @@ body {
   margin-top: 100px;
 }
 
-.publictopbar, .profileedit, .row {
-  max-width: 360px;
+.login .row {
   margin: 0 auto;
+  width: 50%;
+}
+
+.signup .row {
+  margin: 0 auto;
+  width: 30%;
 }
 
 input#user_remember_me {
@@ -48,6 +69,12 @@ input#user_remember_me {
 
 input.button {
   background-color: #FF0038;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+input.button:hover {
+  color: white;
 }
 
 .sharedlinks a {
@@ -75,20 +102,36 @@ label.boolean.optional.checkbox {
 }
 /*PUBLIC NAV*/
 
-nav, .top-bar {
+.signup .top-bar {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 30px;
   background-color: #D1F0E6;
-  width: 1518px;
-  margin-left: -560px; 
+  width: 100%;
+  margin-left: -20px;
+}
+
+nav.top-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #D1F0E6;
+  width: 100%;
 }
 
 .pubnav li {
   list-style-type: none;
   display: inline;
   margin: 0px 20px 0px 20px;
+}
+
+.pubnav a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 2.5px;
 }
 
 .publicnavlogo {
@@ -99,4 +142,5 @@ nav, .top-bar {
 
 .pubnav ul {
   margin-top: 3px;
+  text-align: center;
 }

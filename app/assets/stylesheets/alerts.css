@@ -1,0 +1,6 @@
+.alert-box.success.radius {
+  width:350px;
+  position: fixed;
+  right: 0;
+  background-color: none;
+}
