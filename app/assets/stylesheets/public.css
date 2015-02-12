@@ -1,4 +1,40 @@
-/*LOG IN AND SIGN UP (PUBLIC)*/
+/*GAgenda*/
+
+.hello h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 200px;
+  letter-spacing: 2px;
+  color: #E4EFF6;
+  text-align: center;
+  margin-top: 180px;
+  line-height: 99%;
+}
+
+.hello span {
+  font-family: 'Oswald', sans-serif;
+  }
+
+.hellosub a {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color:white;
+  font-size: 35px;
+  letter-spacing: 3px;
+  color:#FE4148;
+}
+
+.hellosub {
+  padding-left: 580px;
+}
+
+.hellosub a:hover {
+  background-color: #E4EFF6;
+  padding-left: 10px;
+}
+
+/*LOG IN AND SIGN UP (PUBLIC) & PROFILE EDIT*/
 body {
   background-color: #133938;
 }
@@ -32,6 +68,10 @@ body {
   padding-top: 50px;
 }
 
+.profileedit {
+  padding-top: 80px;
+}
+
 .sharedlinks {
   font-size: 15px;
 }
@@ -58,6 +98,18 @@ body {
   width: 50%;
 }
 
+.profileedit .row {
+  margin: 0 auto;
+  width: 30%;
+}
+
+.profileedit .rowlarge .row {
+  width: 60%;
+}
+
+.rowlarge .row.collapse.prefix-radius {
+  margin: 0 auto;
+}
 .signup .row {
   margin: 0 auto;
   width: 30%;
@@ -71,6 +123,7 @@ input.button {
   background-color: #FF0038;
   letter-spacing: 2px;
   font-size: 14px;
+  margin-top: 10px;
 }
 
 input.button:hover {

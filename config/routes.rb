@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_scope :user do
-    root 'devise/registrations#new'
+    root 'courses#welcome'
   end
 
   devise_for :users
@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show', as: :user_profile
   get '/instructors', to: 'users#index', as: :instructor_profiles
   get '/directory', to: 'categories#directory', as: :directory
+  get '/welcome', to: 'courses#welcome', as: :welcome
+
   resources :classrooms
   resources :categories
   resources :courses do

@@ -1,5 +1,4 @@
 .courseindex {
-  font-family: 'Roboto', sans-serif;
   background-color: #FEC56D;
 }
 
@@ -24,17 +23,6 @@
   padding-top: 400px;
   padding-left: 60px;
   position:fixed;
-}
-
-.coursename a {
-  font-family: 'Oswald', sans-serif;
-  font-size: 26px;
-  letter-spacing: 2px;
-  color:#FEC56D;
-  }
-
-.coursename a:hover {
-  color: #FE4148;
 }
 
 .coursedescription {
@@ -78,4 +66,15 @@
   width: 400px;
   margin-right: 50px;
   display: inline-block;
+}
+
+.coursename a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  color:#FEC56D;
+  font-weight: 300;
+  }
+
+.coursename a:hover {
+  color: #FE4148;
 }
