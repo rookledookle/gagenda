@@ -1,1 +1,15 @@
-hello
+<div class="catindex">
+<h3 class="cattitle">What shall we learn today?</h3>
+<h5 class="catsubtitle">Venture below.</h5>
+<div class="categories">
+<% @categories.each do |cat| %>
+  <h4 class="catname"><%= link_to cat.name, category_path(cat) %></h4>
+  <div class="catbody">
+    <p class="catabout"><%= cat.about %></p>
+    <% cat.courses.each do |coursename| %>
+      <p class="catcoursename"><%= link_to coursename.name, course_path(coursename) %></p>
+      <% end %>
+  </div>
+<% end %>
+</div>
+</div>
