@@ -1,5 +1,5 @@
 <div class="login">
-  <h3 class="login-header">Welcome home buddy!</h3>
+  <h3 class="login-header">Welcome home, buddy.</h3>
   <div class="login-body">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -26,7 +26,9 @@
               <span class="prefix">Password</span>
             </div>
             <div class="small-9 columns">
-            <%= f.text_field :password, required: true, autofocus: true, placeholder: "ilovemyself" %>
+            <div class="password-field">
+              <%= f.input :password, required: true, autofocus: true, placeholder: "ilovemyself", label: false%>
+           </div>
             </div>
             </p>
           </div>

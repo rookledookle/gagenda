@@ -1,7 +1,15 @@
 /*LOG IN AND SIGN UP (PUBLIC)*/
+body {
+  background-color: #133938;
+}
+
 .signup-header, .login-header {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 52px;
+  letter-spacing: 2px;
+  color: #E4EFF6;
 }
 
 .login, .signup, input.button {
@@ -12,6 +20,10 @@
   padding: 5px 20px;
 }
 
+.signup {
+  padding-top: 80px;
+}
+
 .sharedlinks {
   font-size: 15px;
 }
@@ -19,15 +31,14 @@
 .login, .signup, .profileedit{
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  margin-top: 50px;
 }
 
 .login {
   margin-top: 100px;
 }
 
-.publictopbar, .profileedit .row {
-  max-width: 480px;
+.publictopbar, .profileedit, .row {
+  max-width: 360px;
   margin: 0 auto;
 }
 
@@ -35,14 +46,28 @@ input#user_remember_me {
   margin-right: 10px;
 }
 
+input.button {
+  background-color: #FF0038;
+}
+
+.sharedlinks a {
+  color:#C2EBDF;
+}
+
+span.prefix {
+  background-color: #C2EBDF;
+  color:#133938;
+}
 /*PUBLIC NAV*/
 
-.publictopbar .top-bar {
+nav, .top-bar {
   position: fixed;
   bottom: 0;
   width: 100%;
-  margin-left: -20px;
   height: 39px;
+  background-color: white;
+  width: 1518px;
+  margin-left: -560px; 
 }
 
 .pubnav li {

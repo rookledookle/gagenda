@@ -39,10 +39,12 @@
         <div class="row collapse prefix-radius">
           <p>
           <div class="small-3 columns">
-            <span class="prefix">Password</span>
+            <span class="prefix" >Password</span>
           </div>
           <div class="small-9 columns">
-          <%= f.text_field :password, required: true, placeholder: "super secret password", hint: ("at least #{@minimum_password_length} characters please" if @validatable) %>
+          <div class="password-field">
+          <%= f.input :password, label:false, required: true, placeholder: "minimum 8 characters. super secret!" %>
+          </div>
           </div>
           </p>
         </div>
