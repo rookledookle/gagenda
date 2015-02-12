@@ -59,7 +59,7 @@
             <span class="prefix">Password</span>
           </div>
           <div class="small-9 columns">
-          <%= f.text_field :password_confirmation, required: true, placeholder: "... and again!", hint: ("at least #{@minimum_password_length} characters please" if @validatable) %>
+          <%= f.input :password_confirmation, required: true, label:false,placeholder: "... and again!", hint: ("at least #{@minimum_password_length} characters please" if @validatable) %>
           </div>
           </p>
         </div>
