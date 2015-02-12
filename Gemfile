@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.1.4'
 
 gem 'rails_12factor', group: :production
+gem 'compass'
 
 gem 'rails', '4.2.0'
 gem 'pg'
