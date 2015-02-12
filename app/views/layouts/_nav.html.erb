@@ -13,12 +13,13 @@
         <% if Role.find(current_user.role_id).name == "admin" %>
       <li><%= link_to "CREATE" %></li>
         <% end %>
-        <% if user_signed_in? %>
-        <li><%= link_to('LOG OUT', destroy_user_session_path, :method => :delete) %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to('LOG OUT', destroy_user_session_path) %></li>
+      <% end %>
 <!--         <li><%= link_to('Edit registration', edit_user_registration_path(current_user)) %></li>
  -->        <li><%= link_to("#{current_user.name.downcase}'s PROFILE", user_profile_path(current_user)) %></li>
 <!--         <li><%= link_to('Instructors', instructor_profiles_path) %></li> -->
-        <% end %>
+        
     </ul>
     </div>
   </nav>
