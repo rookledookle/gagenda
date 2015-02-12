@@ -1,3 +1,73 @@
+.newclassform, 
+.newcatform,
+.newcourseform {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*NEW COURSE*/
+
+.newcoursebutton {
+  margin-left: 570px;
+  padding-bottom: 90px;
+   }
+
+.newcoursetitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 80px;
+  color:white;
+  font-style: italic;
+}
+
+.date span.prefix {
+  height: 111px;
+  padding-top: 38px;
+}
+
+.input.check_boxes.optional.course_categories label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  color: white;
+  text-align: center;
+}
+
+label {
+  margin-left: 5px;
+}
+
+/*NEW CAT*/
+.newcattitle,
+.newclasstitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 200px;
+  color:white;
+  font-style: italic;
+}
+
+.about .prefix {
+  height:50px;
+  padding-top: 7px;
+}
+
+textarea#category_about {
+  padding-top: 11.5px;
+  font-size: 15px;
+}
+
+.newcatform .row,
+.newclassform .row {
+  width: 50%
+}
+
+.newcourseformfield .large-centered .row {
+  width: 40%;
+}
 /*CATEGORY INDIV PAGE*/
 .catindivpage {
   background-color:#AFB1E4;
@@ -79,4 +149,17 @@ p.catcoursename {
 
 .catcoursename a:hover {
   color: #FE4148;
+}
+
+::-webkit-input-placeholder {
+  color: #909195;
+}
+
+input#category_name,
+input#classroom_description,
+input#category_about,
+input#classroom_chair_rating,
+input#classroom_name
+ {
+  color:#FF0038;
 }

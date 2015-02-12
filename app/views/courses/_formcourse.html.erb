@@ -1,32 +1,117 @@
+<div class="newcourseform">
 <%= minimal_form_for(@course) do |f| %>
-  <p>
-  <%= f.input :name, placeholder: 'course name'%>
-  </p>
-  <p>
-  <%= f.input :duration, placeholder: 'how long is this course?'%>
-  </p>
-  <p>
-  <%= f.input :start_date, as: :date, placeholder: 'start date' %>
-  </p>
-  <p>
-  <%= f.input :end_date, as: :date, placeholder: 'end date' %>
-  </p>
-  <p>
-  <%= f.input :start_time, as: :time, placeholder: 'start time' %>
-  </p>
-  <p>
-  <%= f.input :end_time, as: :time, placeholder: 'end time' %>
-  </p>
-  <p>
-  <%= f.input :price, placeholder: 'cost of course (only numerals, please)'%>
-  </p>
-  <p>
-  <%= f.input :about, as: :text, placeholder: 'course description'%>
-  </p>
-  <p>
+ 
+ <div class="newcourseformfield">
+        <div class="large-centered">
+          <div class="row collapse prefix-radius">
+            <p>
+            <div class="small-3 columns">
+              <span class="prefix">Name</span>
+            </div>
+            <div class="small-9 columns">
+            <%= f.input :name, required: true, autofocus:true, placeholder: "Sublime Theme Customization" %>
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="newcourseformfield">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Duration</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :duration, required: true, autofocus:true, placeholder: "4 Hours" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+<div class="date">
+<div class="newcourseformfield">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Start Date</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :start_date, required: true, autofocus:true, placeholder: "25 December" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+<div class="newcourseformfield">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">End Date</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :end_date, required: true, autofocus:true, placeholder: "25 December" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="newcourseformfield">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Start Time</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :start_time, required: true, autofocus:true, placeholder: "4:42" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+<div class="newcourseformfield">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">End Time</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :end_time, required: true, autofocus:true, placeholder: "8:43" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+<div class="newcourseformfield">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Price</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :price, required: true, autofocus:true, placeholder: "0.99" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
   <%= f.association :categories, as: :check_boxes %>
-  </p>
-  <p>
-  <%= f.button :submit %>
-  </p>
+  <div class="newcoursebutton">
+    <div class="form-actions hvr-buzz-out">
+      <%= f.button :submit, "TU TU TU DU" %>
+    </div>
+  </div>
+
 <% end %>
+</div>

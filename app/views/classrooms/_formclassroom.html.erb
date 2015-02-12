@@ -1,15 +1,55 @@
-<%= minimal_form_for(@classroom) do |f| %>
+<div class="newclassform">
 
-  <p>
-  <%= f.input :name, placeholder: 'course name' %>
-  </p>
-  <p>
-  <%= f.input :description, placeholder: 'tell me about this classroom' %>
-  </p>
-  <p>
-  <%= f.input :chair_rating, placeholder: 'what about the chairs? be honest.' %>
-  </p>
-  <p>
-  <%= f.button :submit %>
-  </p>
+<%= minimal_form_for(@classroom) do |f| %>
+  <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Room Name</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :name, required: true, autofocus:true, placeholder: "Imperial Chinese Era Wooden Chairs" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Description</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :description, required: true, autofocus:true, placeholder: "capacity: 1.8 children" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Chair Rating</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :chair_rating, required: true, autofocus:true, placeholder: "Imperial Chinese Era Wooden Chairs" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+  <div class="form-actions hvr-buzz-out">
+      <%= f.button :submit, "MAGIC" %>
+    </div>
+
 <% end %>
+
+</div>

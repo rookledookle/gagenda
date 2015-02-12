@@ -1,11 +1,39 @@
-<%= minimal_form_for(@category) do |f| %>
-  <p>
-  <%= f.input :name, placeholder: 'category name' %>
-  </p>
-  <p>
-  <%= f.input :about, as: :text, placeholder: 'about this category' %>
-  </p>
-  <p>
-  <%= f.button :submit %>
-  </p>
-<% end %>
+<div class="newcatform">
+  <%= minimal_form_for(@category) do |f| %>
+    <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">Category Name</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :name, required: true, autofocus:true, placeholder: "Little Puppies" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="about">
+    <div class="row">
+      <div class="large-centered">
+        <div class="row collapse prefix-radius">
+          <p>
+          <div class="small-3 columns">
+            <span class="prefix">About</span>
+          </div>
+          <div class="small-9 columns">
+          <%= f.input :about, required: true, autofocus:true, placeholder: "stealing cute puppies" %>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="form-actions hvr-buzz-out">
+      <%= f.button :submit, "GHOSTBUSTERS" %>
+    </div>
+
+  <% end %>
+</div>

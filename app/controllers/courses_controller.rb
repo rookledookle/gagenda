@@ -7,6 +7,9 @@ class CoursesController < ApplicationController
   def creatething
   end
 
+  def sitemap
+  end
+
   def new
     @course = Course.new
   end

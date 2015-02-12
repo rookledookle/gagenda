@@ -1,0 +1,37 @@
+body .sitemap {
+  margin: 30px;
+  padding: 20px;
+}
+
+.sanserif,
+.serif {
+  float: left;
+  background-color: #FBF8F4
+
+}
+
+.sanserif a {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  font-weight: 700;
+  font-style: italic;
+  color: #133938;
+  letter-spacing: 3px;
+  padding: 20px;
+}
+
+.serif a {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  color:#133938;
+  font-style: italic;
+  padding: 20px;
+}
+
+.sanserif a:hover {
+  color: #5839AC;
+}
+
+.serif a:hover {
+  color: #5839AC;
+}
