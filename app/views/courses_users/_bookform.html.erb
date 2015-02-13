@@ -1,5 +1,9 @@
+<div class="coursesuser">
 <%= simple_form_for [@course, @courses_user] do |f| %>
   <%= f.hidden_field :course_id, :value => @course.id %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
-  <%= f.submit "BOOK" %>
+      <div class="form-actions animated rubberBand">
+      <%= f.button :submit, "BOOK ME NOW" %>
+    </div>
 <% end %>
+</div>

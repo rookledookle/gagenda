@@ -1,0 +1,11 @@
+.coursesuser input.button {
+  width: 500px;
+  height:100px;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.coursesuser {
+  margin-left: 400px;
+  margin-top: 300px;
+}

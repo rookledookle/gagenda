@@ -1,19 +1,22 @@
-<h3>This is the course you selected</h3>
-
-<p><%= @course.name %></p>
-<p><%= @course.duration %></p>
-<p><%= @course.start_date %></p>
-<p><%= @course.end_date %></p>
-<p><%= number_to_currency(@course.price, :unit => "£", :delimiter => ",") %></p>
+<div class="courseshow">
+<h3 class="courseshowname">
+  <%= @course.name %>
+  <p><%= @course.duration %></p>
+  <p class="coursenamesub"><%= @course.start_date %></p>
+  <p class="coursenamesub"><%= @course.end_date %></p>
+  <p class="coursenamesub"><%= number_to_currency(@course.price, :unit => "£", :delimiter => ",") %></p>
 <p>
-<% @course.users.each do |user| %>
-  <%= user.name %>
+</h3>
+
+<div class="courseinfo">
+  <p><%= @course.about %></p>
+
+<% if current_user.role_id == 1 %>
+  <p class="courseshowadd"><%= link_to "Book this course", new_course_courses_user_path(@course)%></p>
 <% end %>
-</p>
 
-<p><%= link_to "Book this course", new_course_courses_user_path(@course)%></p>
-
-  <p><%= link_to "Edit", edit_course_path %></p>
-  <p><%= link_to 'Destroy', course_path(@course),
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %></p>
+<% if current_user.role_id == 4 %>
+  <p class="courseshowadd"><%= link_to "Teach this course", new_course_courses_user_path(@course)%></p>
+<% end %>
+</div>
+</div>

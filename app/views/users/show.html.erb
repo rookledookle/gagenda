@@ -1,4 +1,5 @@
 <div class="profile">
+<p class="userimage"><%= image_tag("#{current_user.user_image.thumb.url}") %></p>
   <div class="profileside">
   <div class="greeting">
   <% if Time.now < "12:00" %>
@@ -9,14 +10,13 @@
     <h3><span>Good afternoon,</span> <%= current_user.name.upcase %>!</h3>
   <% end %>
   </div>
-  <p class="userimage"><%= image_tag("#{current_user.user_image.thumb.url}") %></p>
   </div>
 
   <div class="profileright">
-  <p>Email: <%= current_user.email %></p>
+  <p class="profileemail">EMAIL: <%= mail_to "#{current_user.email}" %></p>
   <% if current_user.role_id == 1 %> 
     <p>
-    Courses enrolled in: 
+    COURSES ENROLLED IN: 
     <% @enrolled = CoursesUser.find_by user_id: current_user.id %>
     <% if @enrolled.present? %>
       <%= Course.find(@enrolled.course_id).name %>
@@ -26,7 +26,7 @@
 
   <% if current_user.role_id == 4 %>
   <p>
-    Courses teaching:
+    COURSES TEACHING:
     <% @teaching = CoursesUser.find_by user_id: current_user.id %>
     <% if @teaching.present? %>
       <%= Course.find(@teaching.course_id).name %>
@@ -35,9 +35,10 @@
   </p>
   <% end %>
     
-  <p>Account status: <%= Role.find(current_user.role_id).name.upcase %></p>
-  <p>Account made on: <%= current_user.created_at %></p>
+  <p>ACCOUNT STATUS: <%= Role.find(current_user.role_id).name.upcase %></p>
+  <p>ACCOUNT MADE ON: <%= current_user.created_at %></p>
 
+  <div class="editprofile">
   <p><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></p>
   </div>
 </div>

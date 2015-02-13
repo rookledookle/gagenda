@@ -1,9 +1,13 @@
-<h4>All instructors</h4>
-
+<div class="instructors">
+<h4 class="instructortitle">INTRODUCING THE INSTRUCTORS</h4>
+<div class="instructorbody">
 <% @users.each do |user| %>
   <% if user.role_id == 4 %>
-    <p><%= user.name %></p>
-    <p><%= user.email %></p>
-    <p><%= user.biography %></p>
+  <div class="instructorblock">
+    <p class="instructorname"><%= user.name %></p>
+    <p class="instructoremail"><%= mail_to "#{user.email}" %></p>
+    </div>
   <% end %>
 <% end %>
+</div>
+</div>

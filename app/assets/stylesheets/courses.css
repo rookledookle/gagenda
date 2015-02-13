@@ -1,3 +1,49 @@
+/*COURSE SHOW*/
+
+.courseshow {
+  height: 100%;
+  width: 100%;
+  background-color: #FCFCF7;
+}
+
+.courseshowname {
+  font-family: 'Vollkorn', serif;
+  font-size: 50px;
+  float:right;
+  margin-top: 200px;
+  margin-right: 200px;
+  margin-left: 50px;
+  color: #3945AC;
+  text-decoration: underline;
+  width: 450px;
+  text-align: right;
+}
+
+.courseshowname p {
+  text-align: right;
+  font-size: 40px;
+}
+
+.courseinfo {
+  font-family: 'Vollkorn', serif;
+  font-size: 20px;
+  width: 40%;
+  margin-left: 170px;
+  padding-top: 100px;
+}
+.courseshowname .coursenamesub{
+  line-height: 0.8;
+  text-decoration: none;
+}
+
+.courseshowadd a {
+  color:red;
+  font-size: 30px;
+  font-family: 'Vollkorn', serif;
+  text-decoration: underline;
+}
+
+/*COURSE INDEX*/
 .courseindex {
   background-color: #FEC56D;
 }

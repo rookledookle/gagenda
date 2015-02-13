@@ -42,7 +42,9 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
-  end
+    @users = User.all
+    @coursesusers = CoursesUser.all
+   end
 
   def destroy
     @course = Course.find(params[:id])

@@ -1,0 +1,52 @@
+.instructors {
+  width: 100%;
+  height: 1200px;
+  background-color: #FEFBFB;
+}
+
+.instructortitle {
+  font-family: 'Oswald';
+  font-size: 100px;
+  text-align: center;
+  color: #A48F37;
+  line-height: 0.9;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.instructorname {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 0.8;
+  color:#6B2424;
+}
+
+.instructorbody {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.instructorblock {
+  width: 33.333%;
+  float: left;
+  text-align: center;
+}
+
+.instructoremail a {
+  font-family: 'Oswald';
+  font-weight: 300;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color:#6B2424;
+}
+
+.instructoremail a:hover {
+  color:#A48F37;
+}
+
+.instructoremail {
+  line-height: 0.8;
+  padding-bottom: 20px;
+}
