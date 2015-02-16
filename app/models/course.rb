@@ -9,7 +9,6 @@ class Course < ActiveRecord::Base
   validates :price, exclusion: { in: %w(£ ¢ $ €), message: "%{value} cannot be used. even in life and death situations." }
   validates :name, uniqueness: true, exclusion: { in: %w(! # $ % & * [ ])}
   validates :name, length: {minimum: 5, message: "It has to be longer than 5 characters. Try specifying the batch number."}
-
   validate :start_date, :validates_start_date
   validate :end_date, :validates_end_date_after_start_date
 
