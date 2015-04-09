@@ -1,0 +1,8 @@
+.catindivpage
+  .cattitle
+    %h3= @category.name
+  .catcourses
+    - @category.courses.each do |coursename|
+      %p= link_to coursename.name, course_path(coursename)
+  - if current_user.role_id == 4
+    %p= link_to "Edit", edit_category_path

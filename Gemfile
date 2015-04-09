@@ -19,6 +19,7 @@ gem 'rails_admin'
 gem 'devise'
 gem 'dynamic_form'
 gem 'business_time'
+gem 'haml'
 
 gem 'jquery-rails'
 gem 'turbolinks'

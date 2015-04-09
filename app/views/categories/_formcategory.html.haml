@@ -1,0 +1,24 @@
+.newcatform
+  - minimal_form_for(@category) do |f|
+    .row
+      .large-centered
+        .row.collapse.prefix-radius
+          %p
+            .small-3.columns
+              %span.prefix Category Name
+      
+          .small-9.columns
+          - f.input :name, required: true, autofocus:true, placeholder: "Little Puppies"
+
+    .about
+    .row
+      .large-centered
+        .row.collapse.prefix-radius
+          %p
+            .small-3.columns
+              %span.prefix About
+          .small-9.columns
+          - f.input :about, required: true, autofocus:true, placeholder: "stealing puppies from unsuspecting bad people"
+
+    .form-actions.hvr-buzz-out
+      -f.button :submit, "GHOSTBUSTERS"

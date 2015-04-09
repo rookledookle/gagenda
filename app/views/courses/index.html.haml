@@ -1,0 +1,12 @@
+.courseindex
+  %h3.courseindextitle General Assembly <br>Courses</br>
+  %h5.courseindexsubtitle what's shaka-lacking below?
+  .yellow
+    .course
+    - @courses.each do |course|
+      %p
+        .courseitem
+        .coursename= link_to course.name.upcase, course_path(course)
+        .coursedate= course.start_date
+      %p.coursedescription= truncate(course.about, length: 160, omission: '...! ')
+      %p.readon= link_to "read on.", course_path(course)

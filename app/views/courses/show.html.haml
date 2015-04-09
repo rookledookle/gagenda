@@ -1,0 +1,16 @@
+.courseshow
+  %h3.courseshowname
+    = @course.name
+  = @course.duration
+  %p.coursenamesub= @course.start_date
+  %p.coursenamesub= @course.end_date
+  %p.coursenamesub= number_to_currency(@course.price, :unit => "£", :delimiter => ",")
+
+.courseinfo
+  %p= @course.about
+
+-if current_user.role_id == 1
+  %p.courseshowadd= link_to "Book this course", new_course_courses_user_path(@course)
+
+-if current_user.role_id == 4
+  %p.courseshowadd= link_to "Teach this course", new_course_courses_user_path(@course)

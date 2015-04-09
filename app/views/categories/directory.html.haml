@@ -1,0 +1,11 @@
+.catindex
+  %h3.cattitle What shall we learn today?
+  %h5.catsubtitle Venture below.
+
+.categories
+  - @categories.each do |cat|
+    %h4.catname= link_to cat.name, category_path(cat)
+    .catbody
+      %p.catabout= cat.about
+    - cat.courses.each do |coursename|
+      %p.catcoursename= link_to coursename.name, course_path(coursename)
