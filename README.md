@@ -1,5 +1,5 @@
 # GAgenda
-#####[GAgenda (Demo) https://www.gagenda.herokuapp.com](https://www.gagenda.herokuapp.com)
+#####[GAgenda (Demo) https://gagenda.herokuapp.com](https://gagenda.herokuapp.com)
 > *Browse, plan and book courses.*
 
 ### Versions & Setup
